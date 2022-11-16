@@ -1,23 +1,39 @@
-// Copyright (c) 2020 Chloe Havel All rights reserved
+// Copyright (c) 2020 Mr. Coxall All rights reserved
 //
-// Created by: Chloe Havel
+// Created by: Mr. Coxall
 // Created on: Sep 2020
 // This file contains the JS functions for index.html
-
-"use strict"
 
 /**
  * Check servie worker.
  */
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test-1/sw.js", {
-    scope: "/ICS2O-PWA-Test-1/",
-  })
+  if (navigator.serviceWorker) {
+  navigator.serviceWorker.register(
+    "/ICS2O-Unit5-02/sw.js",
+    {
+      scope: "/ICS2O-Unit-5-02/",
+    }
+  )
 }
 
 /**
- * This function displays an alert.
+ * This function updates the slider value.
+ */
+function updateSliderValue(valueFromSlider) {
+  document.getElementById("slider-value").innerHTML = valueFromSlider
+}
+
+/**
+ * This function displays the slider value.
  */
 function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+  buttonOnChecked = document.getElementById('flash1').checked
+
+  if (buttonOnChecked == true) {
+    document.getElementById("radio-button-value").innerHTML =
+    "<p>Value is: On</p>"
+  } else {
+    document.getElementById("radio-button-value").innerHTML =
+    "<p>Value is: Off</p>"
+  }
 }
