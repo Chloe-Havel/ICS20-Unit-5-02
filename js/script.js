@@ -1,6 +1,6 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
+// Copyright (c) 2020 Chloe Havel All rights reserved
 //
-// Created by: Mr. Coxall
+// Created by: Chloe Havel
 // Created on: Sep 2020
 // This file contains the JS functions for index.html
 
@@ -11,7 +11,7 @@ if (navigator.serviceWorker) {
   navigator.serviceWorker.register(
     "/ICS2O-Unit5-01-HTML-Slider-Example/sw.js",
     {
-      scope: "/ICS2O-Unit5-01-HTML-Slider-Example/",
+      scope: "/ICS20-Unit-5-02/",
     }
   )
 }
