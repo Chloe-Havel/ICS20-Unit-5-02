@@ -8,11 +8,13 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-Unit5-02/sw.js", {
-    scope: "/ICS2O-Unit-5-02/",
-  })
+  navigator.serviceWorker.register(
+    "/ICS2O-Unit5-01-HTML-Slider-Example/sw.js",
+    {
+      scope: "/ICS2O-Unit5-01-HTML-Slider-Example/",
+    }
+  )
 }
-
 /**
  * This function updates the slider value.
  */
@@ -24,13 +26,16 @@ function updateSliderValue(valueFromSlider) {
  * This function displays the slider value.
  */
 function myButtonClicked() {
-  buttonOnChecked = document.getElementById("flash1").checked
+  buttonOnChecked = document.getElementById('flash1').checked
 
   if (buttonOnChecked == true) {
+    const randomNumber = Math.floor(Math.random() * 6) + 1 
     document.getElementById("radio-button-value").innerHTML =
-      "<p>Value is: On</p>"
+    "<p>Value is: " + randomNumber + " </p>"
   } else {
+    let randomNumber = Math.floor(Math.random() * 6) + 1 
+    randomNumber = randomNumber * -1
     document.getElementById("radio-button-value").innerHTML =
-      "<p>Value is: Off</p>"
+    "<p>Value is: " + randomNumber + " </p>"
   }
 }
