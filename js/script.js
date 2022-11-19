@@ -9,7 +9,7 @@
  */
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register(
-    "/ICS2O-Unit5-01-HTML-Slider-Example/sw.js",
+    "/ICS20-Unit-5-02/sw.js",
     {
       scope: "/ICS20-Unit-5-02/",
     }
